@@ -357,12 +357,14 @@
         "video_mgprNV": {
           "type": "video",
           "settings": {
-            "video_url": "",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c0b116d16c204a52955ddb93d60730b4.mp4",
             "default_view_count": 688,
+            "corner_thumbnail": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
             "video_title": "",
-            "product_name": "",
-            "product_description": "",
-            "associated_product": ""
+            "videothumb": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
+            "product_name": "test",
+            "product_description": "test",
+            "associated_product": "cotton-ajrakh-kurtis-with-bead-work-and-mirror-work-5"
           }
         },
         "video_KqRXin": {
@@ -386,12 +388,24 @@
             "product_description": "",
             "associated_product": ""
           }
+        },
+        "video_yhYDTX": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "default_view_count": 688,
+            "video_title": "",
+            "product_name": "",
+            "product_description": "",
+            "associated_product": ""
+          }
         }
       },
       "block_order": [
         "video_mgprNV",
         "video_KqRXin",
-        "video_dzUWnU"
+        "video_dzUWnU",
+        "video_yhYDTX"
       ],
       "settings": {
         "section_title": "Video Reels"
