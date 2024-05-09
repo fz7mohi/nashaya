@@ -361,9 +361,9 @@
             "default_view_count": 8784,
             "corner_thumbnail": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
             "video_title": "",
-            "videothumb": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
-            "product_name": "test",
-            "product_description": "test",
+            "videothumb": "shopify:\/\/shop_images\/WhatsAppImage2024-03-19at12.23.06_1.jpg",
+            "product_name": "{{ block.settings.associated_product.title }}",
+            "product_description": "{{ block.settings.associated_product.vendor }}",
             "associated_product": "cotton-ajrakh-kurtis-with-bead-work-and-mirror-work-5"
           }
         },
