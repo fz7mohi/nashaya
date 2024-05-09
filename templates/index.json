@@ -357,8 +357,8 @@
         "video_mgprNV": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c0b116d16c204a52955ddb93d60730b4.mp4",
-            "default_view_count": 688,
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af9e38ec65894f128d3c45bd910d50b2.mp4",
+            "default_view_count": 8784,
             "corner_thumbnail": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
             "video_title": "",
             "videothumb": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
@@ -408,7 +408,7 @@
         "video_yhYDTX"
       ],
       "settings": {
-        "section_title": "Video Reels"
+        "section_title": "Happy Customers"
       }
     },
     "1642989489e5f98f1a": {
@@ -1141,7 +1141,7 @@
         "border_color_button_hover": "",
         "bg_color_button_hover": "",
         "bg_color_gradient_button_hover": "",
-        "product_block_collection": "collection-home-07-new",
+        "product_block_collection": "jewelleries",
         "product_block_limit": 1,
         "grid_gap": 30,
         "pb_style": "style3",
