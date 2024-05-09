@@ -1032,6 +1032,7 @@
           "type": "banner",
           "settings": {
             "enable_image": true,
+            "image": "shopify:\/\/shop_images\/WhatsAppImage2024-03-09at19.28.26.jpg",
             "banner_height": "full_height",
             "enable_image_zoom": true,
             "banner_border_radius": 0,
@@ -1065,7 +1066,7 @@
             "enable_custom_position": false,
             "custom_horizontal": "",
             "custom_vertical": "",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=HscrSwilshM",
             "adaptive_height_video": "56",
             "icon_style": "style_1",
             "color_icon": "#ffffff",
