@@ -15,33 +15,22 @@
       "name": "Video",
       "settings": [
         {
-          "type": "text",
-          "id": "video_url",
-          "label": "Video URL (MP4 format)",
-          "info": "Upload the video to Shopify Assets and provide the URL here. The video must be in portrait orientation."
+          "type": "video",
+          "id": "video_file",
+          "label": "Video File (MP4 format)",
+          "info": "Select the video file in MP4 format from the library. The video must be in portrait orientation."
         },
         {
-  "type": "number",
-  "id": "default_view_count",
-  "label": "Default View Count",
-  "default": 688,
-  "info": "Enter the default starting value for the view count."
-},
+          "type": "number",
+          "id": "default_view_count",
+          "label": "Default View Count",
+          "default": 688,
+          "info": "Enter the default starting value for the view count."
+        },
         {
           "type": "image_picker",
           "id": "corner_thumbnail",
           "label": "Corner Thumbnail Image"
-        },
-        {
-          "type": "text",
-          "id": "video_title",
-          "label": "Video Title",
-          "info": "Enter the title for the video."
-        },
-        {
-          "type": "image_picker",
-          "id": "videothumb",
-          "label": "Video Thumbnail Image"
         },
         {
           "type": "text",
@@ -71,400 +60,356 @@
 {% endschema %}
 
 <div class="video-reel-carousel">
-  <h2 class="section-title">{{ section.settings.section_title }}</h2>
-  <div class="video-reel-wrapper">
-    {% for block in section.blocks %}
-     <div class="video-reel-item" data-video-url="{{ block.settings.video_url }}" data-video-title="{{ block.settings.video_title }}" data-thumbnail="{{ block.settings.thumbnail | img_url: 'large' }}" data-product-name="{{ block.settings.product_name }}" data-product-description="Looking For {{ block.settings.product_description }}" data-product-handle="{{ block.settings.associated_product.handle }}" data-corner-thumbnail="{{ block.settings.corner_thumbnail | img_url: 'medium' }}" data-view-count="{{ block.settings.default_view_count }}">
-        <div class="video-thumbnail">
-  <video data-src="{{ block.settings.video_url }}" muted loop playsinline data-poster="{{ block.settings.videothumb | img_url: 'large' }}"></video>
+ <h2 class="section-title">{{ section.settings.section_title }}</h2>
+ <div class="video-reel-wrapper">
+   {% for block in section.blocks %}
+     <div class="video-reel-item" data-video-file="{{ block.settings.video_file.sources[1].url }}" data-video-title="{{ block.settings.video_title }}" data-product-name="{{ block.settings.product_name }}" data-product-description="Looking For {{ block.settings.product_description }}" data-product-handle="{{ block.settings.associated_product.handle }}" data-corner-thumbnail="{{ block.settings.corner_thumbnail | img_url: 'medium' }}" data-view-count="{{ block.settings.default_view_count }}">
+       <div class="video-thumbnail">
+  <img src="{{ block.settings.video_file.preview_image | img_url: 'large' }}" alt="Video Thumbnail" class="video-thumbnail-img">
+  <video class="thumbnail-video" src="{{ block.settings.video_file.sources[1].url }}" muted playsinline></video>
   <div class="play-icon">{% render 'icon-play' %}</div>
 </div>
-      </div>
-    {% endfor %}
-  </div>
+     </div>
+   {% endfor %}
+ </div>
 </div>
 
 <div class="video-reel-popup">
-  <div class="video-reel-popup-content">
-    <div class="video-reel-popup-mute">
-  {% render 'icon-unmute' %}
-</div>
-    <div class="video-reel-popup-close">{% render 'icon-close' %}</div>
-    <div class="video-reel-popup-video">
-      <div class="video-view-count">&nbsp;
-        {% render 'view-icon' %}
-  <span class="view-count"></span>
-  
-</div>
-      <div class="video-player-container">
-        <video id="video-player" preload="auto" playsinline></video>
-        <div class="linear-progress">
-          <div class="linear-progress-bar">&nbsp;</div>
-        </div>
-        
-      </div>
-      <div class="reel-title">
-        <div class="video-corner-thumbnail">
-          <img class="corner-thumbnail" src="" alt="">
-        </div>
-        <div class="video-product-info">
-          <div class="video-product-buttons">
-            <a href="#" class="view-product-btn btn">View Product</a>
-            <button class="share-btn btn">{% render 'icon-share' %}</button>
-          </div>
-          <h3 class="video-product-name"></h3>
-          <p class="video-product-description"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="user-guide-overlay">
-    <div class="user-guide-content">
-      <h3>Swipe Controls</h3>
-      <div class="swipe-guide swipe-guide-right">
-        Swipe Left{% render 'swipe-right' %}For Next Video
-      </div>
-      <div class="swipe-guide swipe-guide-left">
-        Swipe Right{% render 'swipe-left' %} For Prev Video
-      </div>
-      <div class="swipe-guide swipe-guide-down">
-        To Close{% render 'swipe-down' %}
-        Swipe Down
-      </div>
-      <button class="skip-button">Skip</button>
-    </div>
-  </div>
-</div>
-  <div class="video-reel-popup-content">
-    <div class="video-reel-popup-close">{% render 'icon-close' %}</div>
-    <div class="video-reel-popup-video">
-      <div class="video-player-container">
-        <div class="linear-progress">
-          <div class="linear-progress-bar">&nbsp;</div>
-        </div>
-      </div>
-      <div class="reel-title">
-        <div class="video-corner-thumbnail">
-          <img class="corner-thumbnail" src="" alt="">
-        </div>
-        <div class="video-product-info">
-          <div class="video-product-buttons">
-            <a href="#" class="view-product-btn btn">View Product</a>
-            <button class="share-btn btn">{% render 'icon-share' %}</button>
-          </div>
-          <h3 class="video-product-name"></h3>
-          <p class="video-product-description"></p>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="video-reel-popup-content">
+   <div class="video-reel-popup-mute">
+     {% render 'icon-unmute' %}
+   </div>
+   <div class="video-reel-popup-close">{% render 'icon-close' %}</div>
+   <div class="video-reel-popup-video">
+     <div class="video-view-count">
+       {% render 'view-icon' %}
+       <span class="view-count"></span>
+     </div>
+     <div class="video-player-container">
+       <video id="video-player" preload="auto" playsinline></video>
+       <div class="linear-progress">
+         <div class="linear-progress-bar">&nbsp;</div>
+       </div>
+     </div>
+     <div class="reel-title">
+       <div class="video-corner-thumbnail">
+         <img class="corner-thumbnail" src="" alt="">
+       </div>
+       <div class="video-product-info">
+         <div class="video-product-buttons">
+           <a href="#" class="view-product-btn btn">View Product</a>
+           <button class="share-btn btn">{% render 'icon-share' %}</button>
+         </div>
+         <h3 class="video-product-name"></h3>
+         <p class="video-product-description"></p>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="user-guide-overlay">
+   <div class="user-guide-content">
+     <h3>Swipe Controls</h3>
+     <div class="swipe-guide swipe-guide-right">
+       Swipe Left{% render 'swipe-right' %}For Next Video
+     </div>
+     <div class="swipe-guide swipe-guide-left">
+       Swipe Right{% render 'swipe-left' %} For Prev Video
+     </div>
+     <div class="swipe-guide swipe-guide-down">
+       To Close{% render 'swipe-down' %}
+       Swipe Down
+     </div>
+     <button class="skip-button">Skip</button>
+   </div>
+ </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const videoReelItems = document.querySelectorAll('.video-reel-item');
-  const videoReelPopup = document.querySelector('.video-reel-popup');
-  const videoReelPopupClose = document.querySelector('.video-reel-popup-close');
-  const videoReelPopupVideo = document.querySelector('.video-reel-popup-video');
-  const videoPlayer = document.getElementById('video-player');
-  const linearProgressBar = document.querySelector('.linear-progress-bar');
-  const shareButton = document.querySelector('.share-btn');
+ const videoReelItems = document.querySelectorAll('.video-reel-item');
+ const videoReelPopup = document.querySelector('.video-reel-popup');
+ const videoReelPopupClose = document.querySelector('.video-reel-popup-close');
+ const videoReelPopupVideo = document.querySelector('.video-reel-popup-video');
+ const videoPlayer = document.getElementById('video-player');
+ const linearProgressBar = document.querySelector('.linear-progress-bar');
+ const shareButton = document.querySelector('.share-btn');
 
-  let currentVideoIndex = 0;
-  let animationFrameId;
+ let currentVideoIndex = 0;
+ let animationFrameId;
 
-  // Lazy loading videos using IntersectionObserver
-  const videoObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const videoElement = entry.target.querySelector('video');
-        videoElement.setAttribute('src', videoElement.getAttribute('data-src'));
-        videoElement.setAttribute('poster', videoElement.getAttribute('data-poster'));
-        videoElement.load();
-        observer.unobserve(entry.target);
-      }
-    });
-  });
+ videoReelItems.forEach(function(item, index) {
+   const thumbnailVideo = item.querySelector('.thumbnail-video');
+   thumbnailVideo.addEventListener('loadedmetadata', function() {
+     thumbnailVideo.currentTime = 0;
+   });
 
-  videoReelItems.forEach(item => {
-    videoObserver.observe(item);
-  });
-  
-  videoReelItems.forEach(function(item, index) {
-    item.addEventListener('click', function() {
-      currentVideoIndex = index;
-      openVideoPopup();
-    });
-  });
+   item.addEventListener('click', function() {
+     currentVideoIndex = index;
+     openVideoPopup();
+   });
+ });
 
-  videoReelPopupClose.addEventListener('click', closeVideoPopup);
+ videoReelPopupClose.addEventListener('click', closeVideoPopup);
 
-  shareButton.addEventListener('click', function() {
-    const productHandle = videoReelItems[currentVideoIndex].getAttribute('data-product-handle');
-    const productUrl = `/products/${productHandle}`;
-    openShareModal(productUrl);
-  });
+ shareButton.addEventListener('click', function() {
+   const productHandle = videoReelItems[currentVideoIndex].getAttribute('data-product-handle');
+   const productUrl = `/products/${productHandle}`;
+   openShareModal(productUrl);
+ });
 
-  const videoPlayerContainer = document.querySelector('.video-player-container');
-  const hammer = new Hammer(videoPlayerContainer);
+ const videoPlayerContainer = document.querySelector('.video-player-container');
+ const hammer = new Hammer(videoPlayerContainer);
 
-  hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+ hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
-  hammer.on('swipeleft', function() {
-    currentVideoIndex = (currentVideoIndex + 1) % videoReelItems.length;
-    changeVideo('left');
-  });
+ hammer.on('swipeleft', function() {
+   currentVideoIndex = (currentVideoIndex + 1) % videoReelItems.length;
+   changeVideo('left');
+ });
 
-  hammer.on('swiperight', function() {
-    currentVideoIndex = (currentVideoIndex - 1 + videoReelItems.length) % videoReelItems.length;
-    changeVideo('right');
-  });
+ hammer.on('swiperight', function() {
+   currentVideoIndex = (currentVideoIndex - 1 + videoReelItems.length) % videoReelItems.length;
+   changeVideo('right');
+ });
 
-  hammer.on('swipedown', function() {
-    closeVideoPopup();
-  });
+ hammer.on('swipedown', function() {
+   closeVideoPopup();
+ });
 
-  hammer.on('tap', function() {
-    if (videoPlayer.paused) {
-      videoPlayer.play();
-    } else {
-      videoPlayer.pause();
-    }
-  });
+ hammer.on('tap', function() {
+   if (videoPlayer.paused) {
+     videoPlayer.play();
+   } else {
+     videoPlayer.pause();
+   }
+ });
 
-// Add a variable to track if the user guide has been shown
-let userGuideShown = localStorage.getItem('userGuideShown') === 'true';
-  const videoReelPopupMute = document.querySelector('.video-reel-popup-mute');
+ let userGuideShown = localStorage.getItem('userGuideShown') === 'true';
 
-videoReelPopupMute.addEventListener('click', toggleMute);
+ const videoReelPopupMute = document.querySelector('.video-reel-popup-mute');
+ videoReelPopupMute.addEventListener('click', toggleMute);
 
-function toggleMute() {
-  if (videoPlayer.muted) {
-    videoPlayer.muted = false;
-    videoReelPopupMute.classList.remove('muted');
-    videoReelPopupMute.innerHTML = `{% render 'icon-unmute' %}`;
-  } else {
-    videoPlayer.muted = true;
-    videoReelPopupMute.classList.add('muted');
-    videoReelPopupMute.innerHTML = `{% render 'icon-mute' %}`;
-  }
-}
-  function openVideoPopup() {
-  const videoUrl = videoReelItems[currentVideoIndex].getAttribute('data-video-url');
-  const productName = videoReelItems[currentVideoIndex].getAttribute('data-product-name');
-  const productDescription = videoReelItems[currentVideoIndex].getAttribute('data-product-description');
-  const cornerThumbnail = videoReelItems[currentVideoIndex].getAttribute('data-corner-thumbnail');
-  const productHandle = videoReelItems[currentVideoIndex].getAttribute('data-product-handle');
+ function toggleMute() {
+   if (videoPlayer.muted) {
+     videoPlayer.muted = false;
+     videoReelPopupMute.classList.remove('muted');
+     videoReelPopupMute.innerHTML = `{% render 'icon-unmute' %}`;
+   } else {
+     videoPlayer.muted = true;
+     videoReelPopupMute.classList.add('muted');
+     videoReelPopupMute.innerHTML = `{% render 'icon-mute' %}`;
+   }
+ }
 
-  const videoCornerThumbnail = document.querySelector('.video-corner-thumbnail .corner-thumbnail');
-  const videoProductName = document.querySelector('.video-product-name');
-  const videoProductDescription = document.querySelector('.video-product-description');
-  const viewProductButton = document.querySelector('.view-product-btn');
-  const viewCount = document.querySelector('.view-count');
+ function openVideoPopup() {
+   const videoFileUrl = videoReelItems[currentVideoIndex].getAttribute('data-video-file');
+   const productName = videoReelItems[currentVideoIndex].getAttribute('data-product-name');
+   const productDescription = videoReelItems[currentVideoIndex].getAttribute('data-product-description');
+   const cornerThumbnail = videoReelItems[currentVideoIndex].getAttribute('data-corner-thumbnail');
+   const productHandle = videoReelItems[currentVideoIndex].getAttribute('data-product-handle');
 
-  // Retrieve the view count from localStorage or use the default value
-  const defaultViewCount = parseInt(videoReelItems[currentVideoIndex].getAttribute('data-view-count'), 10);
-  const currentViewCount = parseInt(localStorage.getItem(videoUrl) || defaultViewCount, 10);
+   const videoCornerThumbnail = document.querySelector('.video-corner-thumbnail .corner-thumbnail');
+   const videoProductName = document.querySelector('.video-product-name');
+   const videoProductDescription = document.querySelector('.video-product-description');
+   const viewProductButton = document.querySelector('.view-product-btn');
+   const viewCount = document.querySelector('.view-count');
 
-  // Increment the view count and update the displayed value
-  const incrementedViewCount = currentViewCount + 1;
-  viewCount.textContent = incrementedViewCount.toLocaleString();
+   // Retrieve the view count from localStorage or use the default value
+   const defaultViewCount = parseInt(videoReelItems[currentVideoIndex].getAttribute('data-view-count'), 10);
+   const currentViewCount = parseInt(localStorage.getItem(videoFileUrl) || defaultViewCount, 10);
 
-  // Store the incremented view count in localStorage
-  localStorage.setItem(videoUrl, incrementedViewCount);
-    
-  const unmuteIcon = videoReelPopupMute.querySelector('.icon-unmute');
-  videoPlayer.muted = videoReelPopupMute.classList.contains('muted');
-  videoReelPopupMute.innerHTML = videoPlayer.muted ? `{% render 'icon-mute' %}` : `{% render 'icon-unmute' %}`;
-    
-  videoProductName.textContent = productName;
-  videoProductDescription.textContent = productDescription;
-  videoCornerThumbnail.setAttribute('src', cornerThumbnail);
-  viewProductButton.setAttribute('href', `/products/${productHandle}`);
-  videoPlayer.src = videoUrl;
-  videoPlayer.play();
+   // Increment the view count and update the displayed value
+   const incrementedViewCount = currentViewCount + 1;
+   viewCount.textContent = incrementedViewCount.toLocaleString();
 
-  videoReelPopup.classList.add('active');
+   // Store the incremented view count in localStorage
+   localStorage.setItem(videoFileUrl, incrementedViewCount);
 
-  gsap.fromTo(videoReelPopupVideo, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' });
+   videoProductName.textContent = productName;
+   videoProductDescription.textContent = productDescription;
+   videoCornerThumbnail.setAttribute('src', cornerThumbnail);
+   viewProductButton.setAttribute('href', `/products/${productHandle}`);
+   videoPlayer.src = videoFileUrl;
+   videoPlayer.play();
 
-  animationFrameId = requestAnimationFrame(updateProgressBar);
-  videoPlayer.addEventListener('ended', moveToNextVideo);
+   videoReelPopup.classList.add('active');
 
-  if (!userGuideShown) {
-    showUserGuideOverlay();
-  }
-}
+   gsap.fromTo(videoReelPopupVideo, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' });
 
-  function moveToNextVideo() {
-    currentVideoIndex = (currentVideoIndex + 1) % videoReelItems.length;
-    openVideoPopup();
-  }
+   animationFrameId = requestAnimationFrame(updateProgressBar);
+   videoPlayer.addEventListener('ended', moveToNextVideo);
 
-  function closeVideoPopup() {
-    gsap.to(videoReelPopupVideo, {
-      y: '100%',
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power2.in',
-      onComplete: function() {
-        videoReelPopup.classList.remove('active');
-        videoPlayer.pause();
-        videoPlayer.currentTime = 0;
-        linearProgressBar.style.width = '0%';
-        cancelAnimationFrame(animationFrameId);
-        videoPlayer.removeEventListener('ended', moveToNextVideo);
-        gsap.set(videoReelPopupVideo, { y: '0%', opacity: 1 });
-      }
-    });
-  }
-// Add a function to show the user guide overlay
-function showUserGuideOverlay() {
-  const userGuideOverlay = document.querySelector('.user-guide-overlay');
-  const skipButton = document.querySelector('.skip-button');
+   if (!userGuideShown) {
+     showUserGuideOverlay();
+   }
+ }
 
-  userGuideOverlay.classList.add('active');
+ function moveToNextVideo() {
+   currentVideoIndex = (currentVideoIndex + 1) % videoReelItems.length;
+   openVideoPopup();
+ }
 
-  try {
-    videoPlayer.pause(); // Pause the video when the user guide is shown
-  } catch (error) {
-    // Handle the error silently
-  }
+ function closeVideoPopup() {
+   gsap.to(videoReelPopupVideo, {
+     y: '100%',
+     opacity: 0,
+     duration: 0.3,
+     ease: 'power2.in',
+     onComplete: function() {
+       videoReelPopup.classList.remove('active');
+       videoPlayer.pause();
+       videoPlayer.currentTime = 0;
+       linearProgressBar.style.width = '0%';
+       cancelAnimationFrame(animationFrameId);
+       videoPlayer.removeEventListener('ended', moveToNextVideo);
+       gsap.set(videoReelPopupVideo, { y: '0%', opacity: 1 });
+     }
+   });
+ }
 
-  skipButton.addEventListener('click', hideUserGuideOverlay);
+ function showUserGuideOverlay() {
+   const userGuideOverlay = document.querySelector('.user-guide-overlay');
+   const skipButton = document.querySelector('.skip-button');
 
-  setTimeout(() => {
-    hideUserGuideOverlay();
-  }, 300000); // Hide the user guide after 3 seconds
-}
+   userGuideOverlay.classList.add('active');
 
-// Add a function to hide the user guide overlay
-function hideUserGuideOverlay() {
-  const userGuideOverlay = document.querySelector('.user-guide-overlay');
-  const skipButton = document.querySelector('.skip-button');
+   try {
+     videoPlayer.pause();
+   } catch (error) {
+     // Handle the error silently
+   }
 
-  userGuideOverlay.classList.remove('active');
+   skipButton.addEventListener('click', hideUserGuideOverlay);
 
-  try {
-    videoPlayer.play(); // Resume the video when the user guide is hidden
-  } catch (error) {
-    // Handle the error silently
-  }
+   setTimeout(() => {
+     hideUserGuideOverlay();
+   }, 300000);
+ }
 
-  localStorage.setItem('userGuideShown', 'true'); // Set the flag in localStorage
-  userGuideShown = true;
+ function hideUserGuideOverlay() {
+   const userGuideOverlay = document.querySelector('.user-guide-overlay');
+   const skipButton = document.querySelector('.skip-button');
 
-  skipButton.removeEventListener('click', hideUserGuideOverlay);
-}
-  
-  function changeVideo(direction) {
-    gsap.to(videoReelPopupVideo, {
-      x: direction === 'left' ? '-100%' : '100%',
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power2.inOut',
-      onComplete: function() {
-        openVideoPopup();
-        gsap.fromTo(videoReelPopupVideo, { x: direction === 'left' ? '100%' : '-100%', opacity: 0 }, { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.inOut' });
-      }
-    });
-  }
+   userGuideOverlay.classList.remove('active');
 
-  function updateProgressBar() {
-    if (!isNaN(videoPlayer.duration)) {
-      const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-      linearProgressBar.style.width = `${progress}%`;
-    }
-    animationFrameId = requestAnimationFrame(updateProgressBar);
-  }
+   try {
+     videoPlayer.play();
+   } catch (error) {
+     // Handle the error silently
+   }
 
-  function openShareModal(productUrl) {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Check out this amazing product!',
-        text: 'I found this incredible product on {{ shop.name }}. Take a look!',
-        url: productUrl
-      })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing:', error));
-    } else {
-      const shareModal = document.createElement('div');
-      shareModal.classList.add('share-modal');
-      shareModal.innerHTML = `
-        <div class="share-modal-content">
-          <h3>Share this product</h3>
-          <div class="share-options">
-            <button class="share-option" data-platform="facebook">Facebook</button>
-            <button class="share-option" data-platform="twitter">Twitter</button>
-            <button class="share-option" data-platform="whatsapp">WhatsApp</button>
-            <button class="share-option" data-platform="copy-link">Copy Link</button>
-          </div>
-          <button class="share-modal-close">Close</button>
-        </div>
-      `;
-      document.body.appendChild(shareModal);
+   localStorage.setItem('userGuideShown', 'true');
+   userGuideShown = true;
 
-      const shareOptions = shareModal.querySelectorAll('.share-option');
-      const shareModalClose = shareModal.querySelector('.share-modal-close');
+   skipButton.removeEventListener('click', hideUserGuideOverlay);
+ }
 
-      shareOptions.forEach(function(option) {
-        option.addEventListener('click', function(event) {
-          event.stopPropagation();
-          const platform = this.getAttribute('data-platform');
-          shareVideo(platform, productUrl);
-          shareModal.remove();
-          setTimeout(function() {
-            videoPlayer.play();
-          }, 0);
-        });
-      });
+ function changeVideo(direction) {
+   gsap.to(videoReelPopupVideo, {
+     x: direction === 'left' ? '-100%' : '100%',
+     opacity: 0,
+     duration: 0.3,
+     ease: 'power2.inOut',
+     onComplete: function() {
+       openVideoPopup();
+       gsap.fromTo(videoReelPopupVideo, { x: direction === 'left' ? '100%' : '-100%', opacity: 0 }, { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.inOut' });
+     }
+   });
+ }
 
-      shareModalClose.addEventListener('click', function(event) {
-        event.stopPropagation();
-        shareModal.remove();
-        setTimeout(function() {
-          videoPlayer.play();
-        }, 0);
-      });
-    }
+ function updateProgressBar() {
+   if (!isNaN(videoPlayer.duration)) {
+     const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+     linearProgressBar.style.width = `${progress}%`;
+   }
+   animationFrameId = requestAnimationFrame(updateProgressBar);
+ }
 
-    videoPlayer.pause();
-  }
+ function openShareModal(productUrl) {
+   if (navigator.share) {
+     navigator.share({
+       title: 'Check out this amazing product!',
+       text: 'I found this incredible product on {{ shop.name }}. Take a look!',
+       url: productUrl
+     })
+       .then(() => console.log('Successful share'))
+       .catch((error) => console.log('Error sharing:', error));
+   } else {
+     const shareModal = document.createElement('div');
+     shareModal.classList.add('share-modal');
+     shareModal.innerHTML = `
+       <div class="share-modal-content">
+         <h3>Share this product</h3>
+         <div class="share-options">
+           <button class="share-option" data-platform="facebook">Facebook</button>
+           <button class="share-option" data-platform="twitter">Twitter</button>
+           <button class="share-option" data-platform="whatsapp">WhatsApp</button>
+           <button class="share-option" data-platform="copy-link">Copy Link</button>
+         </div>
+         <button class="share-modal-close">Close</button>
+       </div>
+     `;
+     document.body.appendChild(shareModal);
 
-  function shareVideo(platform, shareUrl) {
-    const shareTitle = 'Check out this amazing product!';
-    const shareDescription = 'I found this incredible product on {{ shop.name }}. Take a look!';
+     const shareOptions = shareModal.querySelectorAll('.share-option');
+     const shareModalClose = shareModal.querySelector('.share-modal-close');
 
-    switch (platform) {
-      case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
-        break;
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`, '_blank');
-        break;
-      case 'whatsapp':
-        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareTitle + ' ' + shareUrl)}`, '_blank');
-        break;
-      case 'copy-link':
-        copyToClipboard(shareUrl);
-        break;
-    }
-  }
+     shareOptions.forEach(function(option) {
+       option.addEventListener('click', function(event) {
+         event.stopPropagation();
+         const platform = this.getAttribute('data-platform');
+         shareVideo(platform, productUrl);
+         shareModal.remove();
+         setTimeout(function() {
+           videoPlayer.play();
+         }, 0);
+       });
+     });
 
+     shareModalClose.addEventListener('click', function(event) {
+       event.stopPropagation();
+       shareModal.remove();
+       setTimeout(function() {
+         videoPlayer.play();
+       }, 0);
+     });
+   }
 
-  function copyToClipboard(text) {
-    const tempInput = document.createElement('input');
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    alert('Link copied to clipboard!');
-  }
+   videoPlayer.pause();
+ }
+
+ function shareVideo(platform, shareUrl) {
+   const shareTitle = 'Check out this amazing product!';
+   const shareDescription = 'I found this incredible product on {{ shop.name }}. Take a look!';
+
+   switch (platform) {
+     case 'facebook':
+       window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+       break;
+     case 'twitter':
+       window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`, '_blank');
+       break;
+     case 'whatsapp':
+       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareTitle + ' ' + shareUrl)}`, '_blank');
+       break;
+     case 'copy-link':
+       copyToClipboard(shareUrl);
+       break;
+   }
+ }
+
+ function copyToClipboard(text) {
+   const tempInput = document.createElement('input');
+   tempInput.value = text;
+   document.body.appendChild(tempInput);
+   tempInput.select();
+   document.execCommand('copy');
+   document.body.removeChild(tempInput);
+   alert('Link copied to clipboard!');
+ }
 });
 </script>
-
 
 <style>
 .video-reel-popup-close {
@@ -519,7 +464,8 @@ function hideUserGuideOverlay() {
 .video-reel-popup-mute.muted .icon-unmute {
   color: #ff0000;
 }
- .video-view-count {
+
+.video-view-count {
   position: absolute;
   top: 12px;
   left: 12px;
@@ -545,7 +491,8 @@ function hideUserGuideOverlay() {
   font-size: 14px;
   font-weight: bold;
 }
-  .skip-button {
+
+.skip-button {
   position: relative;
   padding: 12px 24px;
   background-color: transparent;
@@ -574,7 +521,6 @@ function hideUserGuideOverlay() {
   z-index: -1;
 }
 
-
 .skip-button::after {
   content: "\2192";
   position: absolute;
@@ -584,7 +530,6 @@ function hideUserGuideOverlay() {
   opacity: 0;
   transition: opacity 0.3s ease, right 0.3s ease;
 }
-
 
 .user-guide-overlay {
   position: absolute;
@@ -639,304 +584,308 @@ function hideUserGuideOverlay() {
   transform: rotate(180deg);
 }
 
-.swipe-guide p {
-  font-size: 18px;
+.video-product-buttons {
+  display: flex;
+  margin-bottom: 2px;
+  position: absolute;
+  bottom: 45px;
 }
-  
-  .video-product-buttons {
-    display: flex;
-    margin-bottom: 2px;
-    position: absolute;
-    bottom: 45px;
-  }
 
-  .video-product-buttons .btn {
-    padding: 6px 12px;
-    background-color: #757b7bb8;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    white-space: nowrap;
-    margin-right: 10px;
-  }
+.video-product-buttons .btn {
+  padding: 6px 12px;
+  background-color: #757b7bb8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: 10px;
+}
 
-  .video-product-buttons .btn:hover {
-    background-color: #041d1a;
-  }
+.video-product-buttons .btn:hover {
+  background-color: #041d1a;
+}
 
-  .video-product-buttons .share-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  }
+.video-product-buttons .share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
 
-  .video-product-buttons .share-btn svg {
-    width: 16px;
-    height: 16px;
-    fill: #fff;
-  }
+.video-product-buttons .share-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
 
-  .reel-title {
-    position: absolute;
-    bottom: 10px;
-    padding: 40px;
-    width: 100%;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-  }
+.reel-title {
+  position: absolute;
+  bottom: 10px;
+  padding: 40px;
+  width: 100%;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, 20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
+.video-product-info {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  z-index: 2;
+  color: #fff;
+}
 
-  .video-product-info {
-    position: absolute;
-    top: 10px;
-    left: 80px;
-    z-index: 2;
-    color: #fff;
-  }
+.video-product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
 
-  .video-product-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #fff;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
-  }
+.video-product-description {
+  font-size: 10px;
+  line-height: 0.1;
+  max-width: 250px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
 
-  .video-product-description {
-    font-size: 10px;
-    line-height: 0.1;
-    max-width: 250px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
-  }
+.video-corner-thumbnail {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
 
-  .video-corner-thumbnail {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-  }
+.corner-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .corner-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.video-player-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-  .video-player-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+.linear-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
 
-  .linear-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: 2;
-  }
+.linear-progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #ff0000;
+  transition: width 0.3s ease-out;
+}
 
-  .linear-progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #ff0000;
-    transition: width 0.3s ease-out;
-  }
+.video-reel-popup-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
 
-  .video-reel-popup-video {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-    transition: transform 0.5s ease;
-  }
+.video-reel-popup-video.slide-left {
+  transform: translateX(-100%);
+}
 
-  .video-reel-popup-video.slide-left {
-    transform: translateX(-100%);
-  }
+.video-reel-popup-video.slide-right {
+  transform: translateX(100%);
+}
 
-  .video-reel-popup-video.slide-right {
-    transform: translateX(100%);
-  }
+.video-reel-popup-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .video-reel-popup-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.video-reel-carousel {
+  padding: 40px 0;
+  background: #fff;
+  border-radius: 16px;
+  margin-top: 15px;
+}
 
-  .video-reel-carousel {
-    padding: 40px 0;
-    background: #fff;
-    border-radius: 16px;
-    margin-top: 15px;
-  }
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
 
-  .section-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-  }
+.video-reel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  margin: 10px;
+}
 
-  .video-reel-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
-    margin: 10px;
-  }
+.video-reel-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
 
-  .video-reel-wrapper::-webkit-scrollbar {
-    height: 6px;
-  }
+.video-reel-wrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
 
-  .video-reel-wrapper::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-  }
+.video-reel-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
 
-  .video-reel-wrapper::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 3px;
-  }
+.video-reel-item {
+  flex: 0 0 auto;
+  width: 120px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+.video-reel-item:hover {
+  transform: scale(1.05);
+}
+
+.video-thumbnail {
+  position: relative;
+  padding-bottom: 177.78%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumbnail-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-reel-item:hover .video-thumbnail-img {
+  opacity: 0;
+}
+
+.video-reel-item:hover .thumbnail-video {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
   .video-reel-item {
-    flex: 0 0 auto;
-    width: 120px;
-    margin-right: 10px;
-    scroll-snap-align: start;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    width: 100px;
   }
 
-  .video-reel-item:hover {
-    transform: scale(1.05);
-  }
-
-  .video-thumbnail {
-    position: relative;
-    padding-bottom: 177.78%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .video-thumbnail video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
-
-  .play-icon:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .video-reel-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .thumbnail-video {
     display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.9);
   }
 
-  .video-reel-popup.active {
-    display: flex;
-  }
-
-  .video-reel-popup-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    max-height: 80vh;
-    background-color: #0000;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .video-reel-popup.active .video-reel-popup-content {
+  .video-thumbnail-img {
     opacity: 1;
-    transform: scale(1);
   }
+}
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, 20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
 
-  @media screen and (max-width: 768px) {
-    .video-reel-item {
-      width: 100px;
-    }
-  }
-</style>   
+.play-icon:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.video-reel-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.video-reel-popup.active {
+  display: flex;
+}
+
+.video-reel-popup-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  background-color: #0000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.video-reel-popup.active .video-reel-popup-content {
+  opacity: 1;
+  transform: scale(1);
+}
+</style>
