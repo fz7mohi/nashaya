@@ -7,6 +7,22 @@
       "id": "section_title",
       "label": "Section Title",
       "default": "Video Reels"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "Layout Style",
+      "options": [
+        {
+          "value": "card",
+          "label": "Card"
+        },
+        {
+          "value": "rounded",
+          "label": "Rounded"
+        }
+      ],
+      "default": "card"
     }
   ],
   "blocks": [
@@ -59,69 +75,69 @@
 }
 {% endschema %}
 
-<div class="video-reel-carousel">
- <h2 class="section-title">{{ section.settings.section_title }}</h2>
- <div class="video-reel-wrapper">
-   {% for block in section.blocks %}
-     <div class="video-reel-item" data-video-file="{{ block.settings.video_file.sources[1].url }}" data-video-title="{{ block.settings.video_title }}" data-product-name="{{ block.settings.product_name }}" data-product-description="Looking For {{ block.settings.product_description }}" data-product-handle="{{ block.settings.associated_product.handle }}" data-corner-thumbnail="{{ block.settings.corner_thumbnail | img_url: 'medium' }}" data-view-count="{{ block.settings.default_view_count }}">
-       <div class="video-thumbnail">
-  <img src="{{ block.settings.video_file.preview_image | img_url: 'large' }}" alt="Video Thumbnail" class="video-thumbnail-img">
-  <video class="thumbnail-video" src="{{ block.settings.video_file.sources[1].url }}" muted playsinline></video>
-  <div class="play-icon">{% render 'icon-play' %}</div>
-</div>
-     </div>
-   {% endfor %}
- </div>
+<div class="video-reel-carousel {% if section.settings.layout_style == 'rounded' %}rounded{% endif %}">
+  <h2 class="section-title">{{ section.settings.section_title }}</h2>
+  <div class="video-reel-wrapper">
+    {% for block in section.blocks %}
+      <div class="video-reel-item" data-video-file="{{ block.settings.video_file.sources[1].url }}" data-product-name="{{ block.settings.product_name }}" data-product-description="Looking For {{ block.settings.product_description }}" data-product-handle="{{ block.settings.associated_product.handle }}" data-corner-thumbnail="{{ block.settings.corner_thumbnail | img_url: 'medium' }}" data-view-count="{{ block.settings.default_view_count }}">
+        <div class="video-thumbnail">
+          <img src="{{ block.settings.video_file.preview_image | img_url: 'large' }}" alt="Video Thumbnail" class="video-thumbnail-img">
+          <video class="thumbnail-video" src="{{ block.settings.video_file.sources[1].url }}" muted playsinline></video>
+          <div class="play-icon">{% render 'icon-play' %}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 <div class="video-reel-popup">
- <div class="video-reel-popup-content">
-   <div class="video-reel-popup-mute">
-     {% render 'icon-unmute' %}
-   </div>
-   <div class="video-reel-popup-close">{% render 'icon-close' %}</div>
-   <div class="video-reel-popup-video">
-     <div class="video-view-count">
-       {% render 'view-icon' %}
-       <span class="view-count"></span>
-     </div>
-     <div class="video-player-container">
-       <video id="video-player" preload="auto" playsinline></video>
-       <div class="linear-progress">
-         <div class="linear-progress-bar">&nbsp;</div>
-       </div>
-     </div>
-     <div class="reel-title">
-       <div class="video-corner-thumbnail">
-         <img class="corner-thumbnail" src="" alt="">
-       </div>
-       <div class="video-product-info">
-         <div class="video-product-buttons">
-           <a href="#" class="view-product-btn btn">View Product</a>
-           <button class="share-btn btn">{% render 'icon-share' %}</button>
-         </div>
-         <h3 class="video-product-name"></h3>
-         <p class="video-product-description"></p>
-       </div>
-     </div>
-   </div>
- </div>
- <div class="user-guide-overlay">
-   <div class="user-guide-content">
-     <h3>Swipe Controls</h3>
-     <div class="swipe-guide swipe-guide-right">
-       Swipe Left{% render 'swipe-right' %}For Next Video
-     </div>
-     <div class="swipe-guide swipe-guide-left">
-       Swipe Right{% render 'swipe-left' %} For Prev Video
-     </div>
-     <div class="swipe-guide swipe-guide-down">
-       To Close{% render 'swipe-down' %}
-       Swipe Down
-     </div>
-     <button class="skip-button">Skip</button>
-   </div>
- </div>
+  <div class="video-reel-popup-content">
+    <div class="video-reel-popup-mute">
+      {% render 'icon-unmute' %}
+    </div>
+    <div class="video-reel-popup-close">{% render 'icon-close' %}</div>
+    <div class="video-reel-popup-video">
+      <div class="video-view-count">
+        {% render 'view-icon' %}
+        <span class="view-count"></span>
+      </div>
+      <div class="video-player-container">
+        <video id="video-player" preload="auto" playsinline></video>
+        <div class="linear-progress">
+          <div class="linear-progress-bar">&nbsp;</div>
+        </div>
+      </div>
+      <div class="reel-title">
+        <div class="video-corner-thumbnail">
+          <img class="corner-thumbnail" src="" alt="">
+        </div>
+        <div class="video-product-info">
+          <div class="video-product-buttons">
+            <a href="#" class="view-product-btn btn">View Product</a>
+            <button class="share-btn btn">{% render 'icon-share' %}</button>
+          </div>
+          <h3 class="video-product-name"></h3>
+          <p class="video-product-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="user-guide-overlay">
+    <div class="user-guide-content">
+      <h3>Swipe Controls</h3>
+      <div class="swipe-guide swipe-guide-right">
+        Swipe Left{% render 'swipe-right' %}For Next Video
+      </div>
+      <div class="swipe-guide swipe-guide-left">
+        Swipe Right{% render 'swipe-left' %} For Prev Video
+      </div>
+      <div class="swipe-guide swipe-guide-down">
+        To Close{% render 'swipe-down' %}
+        Swipe Down
+      </div>
+      <button class="skip-button">Skip</button>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -412,6 +428,37 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+/* Rounded Layout Style */
+.video-reel-carousel.rounded .video-reel-wrapper {
+  justify-content: center;
+}
+
+.video-reel-carousel.rounded .video-reel-item {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.video-reel-carousel.rounded .video-thumbnail {
+  border-radius: 50%;
+  padding-bottom: 100%;
+}
+
+.video-reel-carousel.rounded .video-thumbnail-img,
+.video-reel-carousel.rounded .thumbnail-video {
+  border-radius: 50%;
+}
+
+.video-reel-carousel.rounded .play-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.video-reel-carousel.rounded .play-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
 .video-reel-popup-close {
   position: absolute;
   top: 15px;
@@ -749,15 +796,12 @@ document.addEventListener('DOMContentLoaded', function() {
   scroll-behavior: smooth;
   padding-bottom: 10px;
   margin: 10px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .video-reel-wrapper::-webkit-scrollbar {
-  height: 6px;
-}
-
-.video-reel-wrapper::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 3px;
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .video-reel-wrapper::-webkit-scrollbar-thumb {
