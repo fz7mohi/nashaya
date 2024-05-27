@@ -1,1 +1,339 @@
-{"type":"header","name":"Header Group","sections":{"a8c78605-a742-44cf-a910-7df4d93385a2":{"type":"header-simple","blocks":{"sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-0":{"type":"group_1","settings":{"layout":"row","bg_color":"#293355","bg_gradient":"","show_language_currency":true,"language_currency_color":"#ffffff","customer_text_01":"<p>Available 24\/7 at <a href=\"tel:(018)%20900-6690\/\">(018) 900-6690<\/a><\/p>","customer_text_01_color":"#ffffff","customer_text_02":"<p><strong>First purchase offer: take 30% off shopwide.<\/strong> Code applied at checkout. Exclusion apply*<\/p>","customer_text_02_color_1":"#ffffff","customer_text_02_color_2":"#cad3f1","padding_top":8,"padding_bottom":8}},"sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-1":{"type":"group_2","settings":{"layout":"row","bg_color":"#1f1a21","bg_gradient":"","logo":"shopify:\/\/shop_images\/Nashaya_Logo.jpg","logo_width":160,"logo_text":"","logo_font_size":30,"logo_font_weight":"900","logo_text_transform":"uppercase","logo_color":"#232323","customer_text_03":"<p><strong>FLASH SALE<\/strong><\/p><p>FROM $29<\/p>","customer_text_03_color":"#ba7a2d","customer_text_03_border_color":"#ba7a2d","show_customer":true,"customer_color":"#232323","padding_top":19,"padding_bottom":20}}},"block_order":["sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-0","sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-1"],"settings":{"container":"1170","padding_full_width":0}},"6877088d-3713-40a4-bfa4-b38bba51b34c":{"type":"header-navigation-compact","blocks":{"51028dfb-9fe5-4b40-b7da-044b40f59630":{"type":"logo","settings":{"logo_position":"always","logo":"shopify:\/\/shop_images\/Nashaya_Logo.jpg","logo_width":85,"logo_width_fixed":55,"logo_text":"","logo_font_size":20,"logo_font_weight":"900","logo_text_transform":"uppercase","logo_color":"#000000"}},"sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-1":{"type":"main_menu","settings":{"menu":"","menu_top_spacing":20,"menu_bottom_spacing":20,"grid_gap_menu_item":14,"alignment":"left","bg_mega_menu":"#ffffff","bg_mega_menu_gradient":"","lv_1_color":"#202020","lv_1_color_hover":"#202020","lv_2_color":"#202020","lv_2_color_hover":"#202020","lv_3_color":"#505050","lv_3_color_hover":"#505050","sale_item_1":"ELLA 30% OFF","sale_item_2":"","sale_item_3":"","sale_item_color":"#ba7a2d","label_position":"main_menu","show_label_blink":false,"new_label_1":"","new_label_2":"Wishlist","new_label_3":"Home 21 - Yoga, Home 22 - Eyes Wears, Home 23 - Plant+ Garden, Home 24 - Bicycle, Mobile Sticky Toolbar, Home 25 - Swimwear 2, Sticky Promotion, Marquee Function","new_label_color":"#ffffff","new_label_bg":"#06bfe2","new_label_bg_gradient":"","sale_label_1":"","sale_label_2":"","sale_label_3":"","sale_label_color":"#ffffff","sale_label_bg":"#ef6454","sale_label_bg_gradient":"","hot_label_1":"","hot_label_2":"Store Locator","hot_label_3":"Bundle - Upsell, Variant Image Grouped, Home 02 - Trendy Style, Home 04 - High Fashion, Home 06 - SuperMarket, Home 15 - Automotive 2, Home 09 - Pet Supplies, Different Mobile Menu, Custom Options, Variant Metafield, Notify Me (Out Of Stock), Color Comparison, Product Combo, RTL Layout","hot_label_color":"#ffffff","hot_label_bg":"#dfd85e","hot_label_bg_gradient":""}},"sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-2":{"type":"header_icons","settings":{"show_language_currency":false,"show_search":true,"show_customer":false,"show_wishlist":true,"show_cart":true,"text_font_size":12,"show_language_currency_sticky":false,"show_search_sticky":true,"show_customer_sticky":false,"show_wishlist_sticky":false,"show_cart_sticky":true,"header_icons_color":"#202020","header_icons_color_hover":"#202020","search_border_color":"#e6e6e6","search_dropdown_bg":"#eaeaea","search_dropdown_bg_gradient":"","search_dropdown_color":"#505050","search_dropdown_placeholder_color":"#bcbcbc","search_dropdown_icon_color":"#ba7a2d","cart_count_bubble_color":"#ffffff","cart_count_bubble_bg":"#ba7a2d","cart_count_bubble_bg_gradient":""}},"ca5e5a9c-78dd-4dd0-94a0-05dce2487fd3":{"type":"megamenu_style_5","settings":{"layout_block":"custom_width","header_custom_width_size":1200,"mega_tyle":"style1","item":"Shop","column":5,"menu_text_left":"","menu_text_left_sale":"Sale","show_banner_1":true,"banner_url_1":"","product_limit":3,"show_product":true,"product_title":"","product_collection":"collection-home-16-flash-sale","bg_mega_menu_bottom":"#f8f8f8"}},"ccf1a342-b84c-454b-8085-00fa74c9b1fe":{"type":"megamenu_style_4","settings":{"layout_block":"custom_width","header_custom_width_size":1200,"item":"Trend","column":5,"menu_text_left":"","menu_text_left_sale":"Sale","show_banner_1":true,"banner_url_1":"","show_banner_2":true,"banner_url_2":"","show_az_brand":true,"az_brand_title":"All Brands A-Z","az_brand_link_text":"See All Brands","az_brand_url":"","bg_mega_menu_bottom":"#f8f8f8","az_brand_link_text_color":"#000000"}},"e4f88370-d1aa-4b15-b3d0-b0d5c9a56157":{"type":"megamenu_style_5","settings":{"layout_block":"custom_width","header_custom_width_size":1200,"mega_tyle":"style3","item":"Collections","column":3,"menu_text_left":"","menu_text_left_sale":"Sale","show_banner_1":true,"banner_url_1":"","product_limit":4,"show_product":true,"product_title":"","product_collection":"collection-home-16-new","bg_mega_menu_bottom":"#f8f8f8"}},"01c52619-9e1d-4681-b50d-9ddc6b828b46":{"type":"megamenu_style_3","settings":{"layout_block":"full","header_custom_width_size":1200,"mega_tyle":"style2","item":"New In","column":5,"show_banner_1":true,"banner_url_1":"","show_banner_2":true,"banner_url_2":"","show_banner_3":true,"banner_url_3":"","show_banner_4":true,"banner_url_4":"","show_banner_5":true,"banner_url_5":""}},"cd466c1d-2ecd-4d4a-92d9-278d46a45aa0":{"type":"megamenu_style_1","settings":{"layout_block":"custom_width","header_custom_width_size":1400,"item":"Theme Demo","column":5,"show_banner_1":false,"banner_url_1":"","show_product":false,"product_title":"Featured Products","product_collection":""}},"6ce30fa1-afd3-4670-a51f-d2c1de1d0c83":{"type":"megamenu_style_1","settings":{"layout_block":"custom_width","header_custom_width_size":1300,"item":"Product","column":5,"show_banner_1":false,"banner_url_1":"","show_product":false,"product_title":"Featured Products","product_collection":""}}},"block_order":["51028dfb-9fe5-4b40-b7da-044b40f59630","sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-1","sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-2","ca5e5a9c-78dd-4dd0-94a0-05dce2487fd3","ccf1a342-b84c-454b-8085-00fa74c9b1fe","e4f88370-d1aa-4b15-b3d0-b0d5c9a56157","01c52619-9e1d-4681-b50d-9ddc6b828b46","cd466c1d-2ecd-4d4a-92d9-278d46a45aa0","6ce30fa1-afd3-4670-a51f-d2c1de1d0c83"],"settings":{"container":"1170","padding_full_width":0,"sticky_header_type":"on_scroll","sticky_header_width":"full","header_navigation_bg":"#ffffff","header_navigation_bg_gradient":"","header_navigation_border_top":"#e6e6e6","header_navigation_border_bottom":"#e6e6e6"}},"header-mobile":{"type":"header-mobile","blocks":{"7de2266e-0cd4-4fda-9f09-06f75a17f944":{"type":"menu","settings":{"color":"#ffffff"}},"163e2cb5-14f2-4af6-9ac3-77193c082f53":{"type":"search","settings":{"color":"#ffffff"}},"550fbd21-75fb-4051-9dee-77d91b5239f0":{"type":"logo","settings":{"logo_mobile":"shopify:\/\/shop_images\/Nashaya_Logo.jpg","logo_width_mobile":105,"logo_text":"","logo_font_size":20,"logo_font_weight":"900","logo_text_transform":"uppercase","logo_color":"#232323"}},"20dae707-64c0-4ea3-a05e-561cae9836d8":{"type":"customer","settings":{"icon":"1","color":"#ffffff"}},"633f9dae-3f65-4bda-9ca8-9d3e231aaf9d":{"type":"cart","settings":{"icon":"2","color":"#ffffff","color_bubble":"#323232","bg_bubble":"#ffe5e8"}}},"block_order":["7de2266e-0cd4-4fda-9f09-06f75a17f944","163e2cb5-14f2-4af6-9ac3-77193c082f53","550fbd21-75fb-4051-9dee-77d91b5239f0","20dae707-64c0-4ea3-a05e-561cae9836d8","633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"],"settings":{"background":"#1f1a21","gradient":"","sticky_header_type":"on_scroll","padding_top":0,"padding_bottom":0}}},"order":["a8c78605-a742-44cf-a910-7df4d93385a2","6877088d-3713-40a4-bfa4-b38bba51b34c","header-mobile"]}
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "a8c78605-a742-44cf-a910-7df4d93385a2": {
+      "type": "header-simple",
+      "blocks": {
+        "sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-0": {
+          "type": "group_1",
+          "settings": {
+            "layout": "row",
+            "bg_color": "#293355",
+            "bg_gradient": "",
+            "show_language_currency": true,
+            "language_currency_color": "#ffffff",
+            "customer_text_01": "<p>Available 24\/7 at <a href=\"tel:(018)%20900-6690\/\">(018) 900-6690<\/a><\/p>",
+            "customer_text_01_color": "#ffffff",
+            "customer_text_02": "<p><strong>First purchase offer: take 30% off shopwide.<\/strong> Code applied at checkout. Exclusion apply*<\/p>",
+            "customer_text_02_color_1": "#ffffff",
+            "customer_text_02_color_2": "#cad3f1",
+            "padding_top": 8,
+            "padding_bottom": 8
+          }
+        },
+        "sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-1": {
+          "type": "group_2",
+          "settings": {
+            "layout": "row",
+            "bg_color": "#1f1a21",
+            "bg_gradient": "",
+            "logo": "shopify:\/\/shop_images\/Nashaya_Logo.jpg",
+            "logo_width": 160,
+            "logo_text": "",
+            "logo_font_size": 30,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323",
+            "customer_text_03": "<p><strong>FLASH SALE<\/strong><\/p><p>FROM $29<\/p>",
+            "customer_text_03_color": "#ba7a2d",
+            "customer_text_03_border_color": "#ba7a2d",
+            "show_customer": true,
+            "customer_color": "#232323",
+            "padding_top": 19,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-0",
+        "sections--14682829619277__a8c78605-a742-44cf-a910-7df4d93385a2-16807686363438d432-1"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0
+      }
+    },
+    "6877088d-3713-40a4-bfa4-b38bba51b34c": {
+      "type": "header-navigation-compact",
+      "blocks": {
+        "51028dfb-9fe5-4b40-b7da-044b40f59630": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo_position": "always",
+            "logo": "shopify:\/\/shop_images\/Nashaya_Logo.jpg",
+            "logo_width": 85,
+            "logo_width_fixed": 55,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#000000"
+          }
+        },
+        "sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-1": {
+          "type": "main_menu",
+          "settings": {
+            "menu": "main-menu",
+            "menu_top_spacing": 20,
+            "menu_bottom_spacing": 20,
+            "grid_gap_menu_item": 14,
+            "alignment": "left",
+            "bg_mega_menu": "#ffffff",
+            "bg_mega_menu_gradient": "",
+            "lv_1_color": "#202020",
+            "lv_1_color_hover": "#202020",
+            "lv_2_color": "#202020",
+            "lv_2_color_hover": "#202020",
+            "lv_3_color": "#505050",
+            "lv_3_color_hover": "#505050",
+            "sale_item_1": "ELLA 30% OFF",
+            "sale_item_2": "",
+            "sale_item_3": "",
+            "sale_item_color": "#ba7a2d",
+            "label_position": "main_menu",
+            "show_label_blink": false,
+            "new_label_1": "",
+            "new_label_2": "Wishlist",
+            "new_label_3": "Home 21 - Yoga, Home 22 - Eyes Wears, Home 23 - Plant+ Garden, Home 24 - Bicycle, Mobile Sticky Toolbar, Home 25 - Swimwear 2, Sticky Promotion, Marquee Function",
+            "new_label_color": "#ffffff",
+            "new_label_bg": "#06bfe2",
+            "new_label_bg_gradient": "",
+            "sale_label_1": "",
+            "sale_label_2": "",
+            "sale_label_3": "",
+            "sale_label_color": "#ffffff",
+            "sale_label_bg": "#ef6454",
+            "sale_label_bg_gradient": "",
+            "hot_label_1": "",
+            "hot_label_2": "Store Locator",
+            "hot_label_3": "Bundle - Upsell, Variant Image Grouped, Home 02 - Trendy Style, Home 04 - High Fashion, Home 06 - SuperMarket, Home 15 - Automotive 2, Home 09 - Pet Supplies, Different Mobile Menu, Custom Options, Variant Metafield, Notify Me (Out Of Stock), Color Comparison, Product Combo, RTL Layout",
+            "hot_label_color": "#ffffff",
+            "hot_label_bg": "#dfd85e",
+            "hot_label_bg_gradient": ""
+          }
+        },
+        "sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-2": {
+          "type": "header_icons",
+          "settings": {
+            "show_language_currency": false,
+            "show_search": true,
+            "show_customer": false,
+            "show_wishlist": true,
+            "show_cart": true,
+            "text_font_size": 12,
+            "show_language_currency_sticky": false,
+            "show_search_sticky": true,
+            "show_customer_sticky": false,
+            "show_wishlist_sticky": false,
+            "show_cart_sticky": true,
+            "header_icons_color": "#202020",
+            "header_icons_color_hover": "#202020",
+            "search_border_color": "#e6e6e6",
+            "search_dropdown_bg": "#eaeaea",
+            "search_dropdown_bg_gradient": "",
+            "search_dropdown_color": "#505050",
+            "search_dropdown_placeholder_color": "#bcbcbc",
+            "search_dropdown_icon_color": "#ba7a2d",
+            "cart_count_bubble_color": "#ffffff",
+            "cart_count_bubble_bg": "#ba7a2d",
+            "cart_count_bubble_bg_gradient": ""
+          }
+        },
+        "ca5e5a9c-78dd-4dd0-94a0-05dce2487fd3": {
+          "type": "megamenu_style_5",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "mega_tyle": "style1",
+            "item": "Shop",
+            "column": 5,
+            "menu_text_left": "",
+            "menu_text_left_sale": "Sale",
+            "show_banner_1": true,
+            "banner_url_1": "",
+            "product_limit": 3,
+            "show_product": true,
+            "product_title": "",
+            "product_collection": "collection-home-16-flash-sale",
+            "bg_mega_menu_bottom": "#f8f8f8"
+          }
+        },
+        "ccf1a342-b84c-454b-8085-00fa74c9b1fe": {
+          "type": "megamenu_style_4",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "Trend",
+            "column": 5,
+            "menu_text_left": "",
+            "menu_text_left_sale": "Sale",
+            "show_banner_1": true,
+            "banner_url_1": "",
+            "show_banner_2": true,
+            "banner_url_2": "",
+            "show_az_brand": true,
+            "az_brand_title": "All Brands A-Z",
+            "az_brand_link_text": "See All Brands",
+            "az_brand_url": "",
+            "bg_mega_menu_bottom": "#f8f8f8",
+            "az_brand_link_text_color": "#000000"
+          }
+        },
+        "e4f88370-d1aa-4b15-b3d0-b0d5c9a56157": {
+          "type": "megamenu_style_5",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "mega_tyle": "style3",
+            "item": "Collections",
+            "column": 3,
+            "menu_text_left": "",
+            "menu_text_left_sale": "Sale",
+            "show_banner_1": true,
+            "banner_url_1": "",
+            "product_limit": 4,
+            "show_product": true,
+            "product_title": "",
+            "product_collection": "collection-home-16-new",
+            "bg_mega_menu_bottom": "#f8f8f8"
+          }
+        },
+        "01c52619-9e1d-4681-b50d-9ddc6b828b46": {
+          "type": "megamenu_style_3",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "mega_tyle": "style2",
+            "item": "New In",
+            "column": 5,
+            "show_banner_1": true,
+            "banner_url_1": "",
+            "show_banner_2": true,
+            "banner_url_2": "",
+            "show_banner_3": true,
+            "banner_url_3": "",
+            "show_banner_4": true,
+            "banner_url_4": "",
+            "show_banner_5": true,
+            "banner_url_5": ""
+          }
+        },
+        "cd466c1d-2ecd-4d4a-92d9-278d46a45aa0": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1400,
+            "item": "Theme Demo",
+            "column": 5,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "6ce30fa1-afd3-4670-a51f-d2c1de1d0c83": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1300,
+            "item": "Product",
+            "column": 5,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "51028dfb-9fe5-4b40-b7da-044b40f59630",
+        "sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-1",
+        "sections--14682829619277__6877088d-3713-40a4-bfa4-b38bba51b34c-1680770151c691618a-2",
+        "ca5e5a9c-78dd-4dd0-94a0-05dce2487fd3",
+        "ccf1a342-b84c-454b-8085-00fa74c9b1fe",
+        "e4f88370-d1aa-4b15-b3d0-b0d5c9a56157",
+        "01c52619-9e1d-4681-b50d-9ddc6b828b46",
+        "cd466c1d-2ecd-4d4a-92d9-278d46a45aa0",
+        "6ce30fa1-afd3-4670-a51f-d2c1de1d0c83"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "sticky_header_type": "on_scroll",
+        "sticky_header_width": "full",
+        "header_navigation_bg": "#ffffff",
+        "header_navigation_bg_gradient": "",
+        "header_navigation_border_top": "#e6e6e6",
+        "header_navigation_border_bottom": "#e6e6e6"
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#ffffff"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#ffffff"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify:\/\/shop_images\/Nashaya_Logo.jpg",
+            "logo_width_mobile": 105,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#ffffff"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "2",
+            "color": "#ffffff",
+            "color_bubble": "#323232",
+            "bg_bubble": "#ffe5e8"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "settings": {
+        "background": "#1f1a21",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "a8c78605-a742-44cf-a910-7df4d93385a2",
+    "6877088d-3713-40a4-bfa4-b38bba51b34c",
+    "header-mobile"
+  ]
+}
