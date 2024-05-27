@@ -209,15 +209,15 @@
             "item": "New In",
             "column": 5,
             "show_banner_1": true,
-            "banner_url_1": "",
+            "banner_url_1": "shopify:\/\/collections\/necklace",
             "show_banner_2": true,
-            "banner_url_2": "",
+            "banner_url_2": "shopify:\/\/collections\/dhavani",
             "show_banner_3": true,
-            "banner_url_3": "",
+            "banner_url_3": "shopify:\/\/collections\/handbags",
             "show_banner_4": true,
-            "banner_url_4": "",
+            "banner_url_4": "shopify:\/\/collections\/kids",
             "show_banner_5": true,
-            "banner_url_5": ""
+            "banner_url_5": "shopify:\/\/collections\/kurti"
           }
         },
         "cd466c1d-2ecd-4d4a-92d9-278d46a45aa0": {
