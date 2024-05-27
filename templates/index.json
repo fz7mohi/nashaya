@@ -299,7 +299,8 @@
         "mg_bottom_mobile": 50,
         "slideshow_background": "",
         "slideshow_background_gradient": "",
-        "autoplay": false,
+        "slideshow_background_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+        "autoplay": true,
         "slideshow_speed": "5000",
         "slideshow_transition": "true",
         "dots": "true",
@@ -357,11 +358,8 @@
         "video_mgprNV": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af9e38ec65894f128d3c45bd910d50b2.mp4",
             "default_view_count": 8784,
             "corner_thumbnail": "shopify:\/\/shop_images\/AyeshaFatimaMSIZE.jpg",
-            "video_title": "",
-            "videothumb": "shopify:\/\/shop_images\/WhatsAppImage2024-03-19at12.23.06_1.jpg",
             "product_name": "{{ block.settings.associated_product.title }}",
             "product_description": "{{ block.settings.associated_product.vendor }}",
             "associated_product": "cotton-ajrakh-kurtis-with-bead-work-and-mirror-work-5"
@@ -370,9 +368,7 @@
         "video_KqRXin": {
           "type": "video",
           "settings": {
-            "video_url": "",
             "default_view_count": 688,
-            "video_title": "",
             "product_name": "",
             "product_description": "",
             "associated_product": ""
@@ -381,9 +377,7 @@
         "video_dzUWnU": {
           "type": "video",
           "settings": {
-            "video_url": "",
             "default_view_count": 688,
-            "video_title": "",
             "product_name": "",
             "product_description": "",
             "associated_product": ""
@@ -392,9 +386,7 @@
         "video_yhYDTX": {
           "type": "video",
           "settings": {
-            "video_url": "",
             "default_view_count": 688,
-            "video_title": "",
             "product_name": "",
             "product_description": "",
             "associated_product": ""
@@ -408,7 +400,8 @@
         "video_yhYDTX"
       ],
       "settings": {
-        "section_title": "Happy Customers"
+        "section_title": "Happy Customers",
+        "layout_style": "card"
       }
     },
     "1642989489e5f98f1a": {
